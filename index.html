@@ -1,0 +1,873 @@
+﻿<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کلینیک دندانپزشکی نور - بهترین خدمات دندانپزشکی در کابل</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Estedad:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'persian': ['Vazirmatn', 'Estedad', 'Tahoma', 'Arial', 'sans-serif'],
+                        'heading': ['Estedad', 'Vazirmatn', 'Tahoma', 'Arial', 'sans-serif']
+                    },
+                    colors: {
+                        'medical-blue': '#1e40af',
+                        'medical-teal': '#0891b2',
+                        'medical-gray': '#374151'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', 'Estedad', 'Tahoma', Arial, sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Estedad', 'Vazirmatn', 'Tahoma', Arial, sans-serif;
+        }
+        
+        /* Video Background Styles */
+        .video-background {
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+        }
+        
+        .video-background video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: -1;
+        }
+        
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.85) 0%, rgba(8, 145, 178, 0.85) 100%);
+            z-index: 1;
+        }
+        
+        .video-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Professional Card Styles */
+        .professional-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .professional-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: #1e40af;
+        }
+        
+        /* Medical Icon Styles */
+        .medical-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #1e40af, #0891b2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Image Styles */
+        .clinic-image {
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .clinic-image:hover {
+            transform: scale(1.02);
+        }
+        
+        /* Professional Button Styles */
+        .btn-primary {
+            background: linear-gradient(135deg, #1e40af, #0891b2);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(30, 64, 175, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 1rem 2rem;
+            border: 2px solid white;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #1e40af;
+        }
+        
+        /* Animation Styles */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-reverse space-x-3">
+                    <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+                        <span class="text-white text-2xl">🦷</span>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800">کلینیک دندانپزشکی نور</h1>
+                        <p class="text-sm text-gray-600">بهترین خدمات دندانپزشکی</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-reverse space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-500 transition-colors">خانه</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-500 transition-colors">خدمات</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-500 transition-colors">درباره ما</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-500 transition-colors">تماس</a>
+                </nav>
+                <button class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+                    نوبت بگیرید
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Video Background -->
+    <section id="home" class="video-background">
+        <!-- 
+        تغییر ویدیو پس‌زمینه: 
+        برای تغییر ویدیو، لینک src در تگ video زیر را تغییر دهید
+        ویدیوهای پیشنهادی:
+        - https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4
+        - https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
+        -->
+        <video autoplay muted loop>
+            <source src="https://github.com/WebDesignAf/container/blob/main/WhatsApp%20Video%202025-09-14%20at%2012.28.03_a7e175ba.mp4?raw=true
+" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+        
+        <div class="video-content text-white py-32">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-6xl font-bold mb-8 fade-in">سلامت دندان، اولویت اول ما</h2>
+                <p class="text-2xl mb-12 max-w-4xl mx-auto leading-relaxed fade-in">
+                    کلینیک دندانپزشکی نور با بیش از یک دهه تجربه و استفاده از پیشرفته‌ترین تکنولوژی‌های روز دنیا، 
+                    خدمات تخصصی دندانپزشکی را در بالاترین سطح کیفیت ارائه می‌دهد
+                </p>
+                <div class="flex flex-col lg:flex-row gap-6 justify-center fade-in">
+                    <button class="btn-primary text-lg">
+                        رزرو نوبت آنلاین
+                    </button>
+                    <button class="btn-secondary text-lg">
+                        مشاوره تخصصی رایگان
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-20">
+                <h3 class="text-5xl font-bold text-medical-gray mb-6">خدمات تخصصی ما</h3>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    کلینیک دندانپزشکی نور با بهره‌گیری از پیشرفته‌ترین تجهیزات و روش‌های درمانی مدرن، 
+                    طیف کاملی از خدمات دندانپزشکی را در استانداردهای بین‌المللی ارائه می‌دهد
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="professional-card fade-in">
+                    <div class="medical-icon">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-medical-gray">درمان و ترمیم دندان</h4>
+                    <p class="text-gray-600 mb-6 leading-relaxed">درمان تخصصی پوسیدگی و ترمیم دندان‌ها با استفاده از کامپوزیت‌های پیشرفته و تکنیک‌های مینیمال اینویسیو</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-medical-blue font-bold text-lg">از ۵۰۰ افغانی</span>
+                        <button class="text-medical-blue hover:text-medical-teal transition-colors">   </button>
+                    </div>
+                </div>
+
+                <div class="professional-card fade-in">
+                    <div class="medical-icon">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-medical-gray">بلیچینگ و زیباسازی</h4>
+                    <p class="text-gray-600 mb-6 leading-relaxed">سفید کردن دندان‌ها با روش‌های ایمن لیزری و شیمیایی برای دستیابی به لبخندی درخشان و طبیعی</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-medical-blue font-bold text-lg">از ۲۰۰۰ افغانی</span>
+                        <button class="text-medical-blue hover:text-medical-teal transition-colors">   </button>
+                    </div>
+                </div>
+
+                <div class="professional-card fade-in">
+                    <div class="medical-icon">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-medical-gray">ارتودنسی پیشرفته</h4>
+                    <p class="text-gray-600 mb-6 leading-relaxed">تنظیم و صاف کردن دندان‌ها با بریس‌های فلزی، سرامیکی و شفاف اینویزالاین</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-medical-blue font-bold text-lg">از ۸۰۰۰ افغانی</span>
+                        <button class="text-medical-blue hover:text-medical-teal transition-colors">   </button>
+                    </div>
+                </div>
+
+                <div class="professional-card fade-in">
+                    <div class="medical-icon">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-medical-gray">ایمپلنت و کاشت دندان</h4>
+                    <p class="text-gray-600 mb-6 leading-relaxed">جایگزینی دندان‌های از دست رفته با ایمپلنت‌های تیتانیومی با کیفیت اروپایی</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-medical-blue font-bold text-lg">از ۱۵۰۰۰ افغانی</span>
+                        <button class="text-medical-blue hover:text-medical-teal transition-colors">   </button>
+                    </div>
+                </div>
+
+                <div class="professional-card fade-in">
+                    <div class="medical-icon">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M5 16c0 3.87 3.13 7 7 7s7-3.13 7-7v-4H5v4zM16.12 4.37l2.1-2.1-.82-.83-2.3 2.31C14.16 3.28 13.12 3 12 3s-2.16.28-3.09.75L6.6 1.44l-.82.83 2.1 2.1C6.14 5.64 5 7.68 5 10v1h14v-1c0-2.32-1.14-4.36-2.88-5.63z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-medical-gray">پروتز و روکش</h4>
+                    <p class="text-gray-600 mb-6 leading-relaxed">ساخت روکش‌های زیرکونیا و پورسلن و پروتزهای ثابت و متحرک با دقت و زیبایی بالا</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-medical-blue font-bold text-lg">از ۳۰۰۰ افغانی</span>
+                        <button class="text-medical-blue hover:text-medical-teal transition-colors">   </button>
+                    </div>
+                </div>
+
+                <div class="professional-card fade-in">
+                    <div class="medical-icon">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1zM10 6a2 2 0 0 1 4 0v1h-4V6zm2 9a2 2 0 1 1 2-2 2 2 0 0 1-2 2z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-medical-gray">پیشگیری و بهداشت</h4>
+                    <p class="text-gray-600 mb-6 leading-relaxed">جرم‌گیری با اولتراسونیک، فلوراید تراپی و آموزش بهداشت دهان و دندان</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-medical-blue font-bold text-lg">از ۸۰۰ افغانی</span>
+                        <button class="text-medical-blue hover:text-medical-teal transition-colors">   </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-20">
+                <h3 class="text-5xl font-bold text-medical-gray mb-6">گالری کلینیک</h3>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    نگاهی به فضای مدرن و تجهیزات پیشرفته کلینیک دندانپزشکی نور
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 
+                تغییر تصاویر کلینیک:
+                برای تغییر تصاویر، لینک‌های src در تگ‌های img زیر را تغییر دهید
+                تصاویر پیشنهادی برای کلینیک دندانپزشکی:
+                - https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=500&h=400&fit=crop
+                - https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=500&h=400&fit=crop
+                - https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=500&h=400&fit=crop
+                - https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=500&h=400&fit=crop
+                - https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=500&h=400&fit=crop
+                - https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?w=500&h=400&fit=crop
+                -->
+                <div class="clinic-image overflow-hidden fade-in">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=500&h=400&fit=crop" 
+                         alt="اتاق درمان مدرن کلینیک" 
+                         class="w-full h-64 object-cover"
+                         onerror="this.src=''; this.alt='تصویر در دسترس نیست'; this.style.display='none';">
+                    <div class="p-6 bg-white">
+                        <h4 class="text-xl font-bold text-medical-gray mb-2">اتاق درمان مدرن</h4>
+                        <p class="text-gray-600">مجهز به جدیدترین تجهیزات دندانپزشکی</p>
+                    </div>
+                </div>
+                
+                <div class="clinic-image overflow-hidden fade-in">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=500&h=400&fit=crop" 
+                         alt="تجهیزات پیشرفته دندانپزشکی" 
+                         class="w-full h-64 object-cover"
+                         onerror="this.src=''; this.alt='تصویر در دسترس نیست'; this.style.display='none';">
+                    <div class="p-6 bg-white">
+                        <h4 class="text-xl font-bold text-medical-gray mb-2">تجهیزات پیشرفته</h4>
+                        <p class="text-gray-600">استفاده از فناوری‌های روز دنیا</p>
+                    </div>
+                </div>
+                
+                <div class="clinic-image overflow-hidden fade-in">
+                    <img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=500&h=400&fit=crop" 
+                         alt="محیط استریل و بهداشتی" 
+                         class="w-full h-64 object-cover"
+                         onerror="this.src=''; this.alt='تصویر در دسترس نیست'; this.style.display='none';">
+                    <div class="p-6 bg-white">
+                        <h4 class="text-xl font-bold text-medical-gray mb-2">محیط استریل</h4>
+                        <p class="text-gray-600">رعایت کامل اصول بهداشت و ایمنی</p>
+                    </div>
+                </div>
+                
+                <div class="clinic-image overflow-hidden fade-in">
+                    <img src="https://archline.ir/file/2021/11/cl-in-pe-8547-1.jpg" 
+                         alt="سالن انتظار راحت و مدرن" 
+                         class="w-full h-64 object-cover"
+                         onerror="this.src=''; this.alt='تصویر در دسترس نیست'; this.style.display='none';">
+                    <div class="p-6 bg-white">
+                        <h4 class="text-xl font-bold text-medical-gray mb-2">سالن انتظار</h4>
+                        <p class="text-gray-600">فضایی آرام و راحت برای بیماران</p>
+                    </div>
+                </div>
+                
+                <div class="clinic-image overflow-hidden fade-in">
+                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=500&h=400&fit=crop" 
+                         alt="تیم متخصص دندانپزشکی" 
+                         class="w-full h-64 object-cover"
+                         onerror="this.src=''; this.alt='تصویر در دسترس نیست'; this.style.display='none';">
+                    <div class="p-6 bg-white">
+                        <h4 class="text-xl font-bold text-medical-gray mb-2">تیم متخصص</h4>
+                        <p class="text-gray-600">دندانپزشکان مجرب و حرفه‌ای</p>
+                    </div>
+                </div>
+                
+                <div class="clinic-image overflow-hidden fade-in">
+                    <img src="https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?w=500&h=400&fit=crop" 
+                         alt="تکنولوژی دیجیتال دندانپزشکی" 
+                         class="w-full h-64 object-cover"
+                         onerror="this.src=''; this.alt='تصویر در دسترس نیست'; this.style.display='none';">
+                    <div class="p-6 bg-white">
+                        <h4 class="text-xl font-bold text-medical-gray mb-2">تکنولوژی دیجیتال</h4>
+                        <p class="text-gray-600">رادیوگرافی و تصویربرداری پیشرفته</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-20">
+                <h3 class="text-5xl font-bold text-medical-gray mb-6">چرا کلینیک نور؟</h3>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    کلینیک دندانپزشکی نور با ترکیب تجربه، تخصص و فناوری مدرن، 
+                    استانداردی جدید در ارائه خدمات دندانپزشکی در افغانستان تعریف کرده است
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <div class="flex items-start space-x-reverse space-x-6 fade-in">
+                        <div class="w-16 h-16 bg-gradient-to-br from-medical-blue to-medical-teal rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold text-medical-gray mb-3">تیم متخصص و مجرب</h4>
+                            <p class="text-gray-600 text-lg leading-relaxed">
+                                دندانپزشکان ما دارای مدارک تخصصی از دانشگاه‌های معتبر و بیش از ۱۰ سال تجربه بالینی هستند
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-reverse space-x-6 fade-in">
+                        <div class="w-16 h-16 bg-gradient-to-br from-medical-blue to-medical-teal rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold text-medical-gray mb-3">تکنولوژی پیشرفته</h4>
+                            <p class="text-gray-600 text-lg leading-relaxed">
+                                استفاده از جدیدترین تجهیزات دندانپزشکی اروپایی و آمریکایی برای دقت و کیفیت بالا
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-reverse space-x-6 fade-in">
+                        <div class="w-16 h-16 bg-gradient-to-br from-medical-blue to-medical-teal rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold text-medical-gray mb-3">استانداردهای بین‌المللی</h4>
+                            <p class="text-gray-600 text-lg leading-relaxed">
+                                رعایت کامل پروتکل‌های بهداشتی WHO و استریلیزاسیون مطابق استانداردهای اروپایی
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-reverse space-x-6 fade-in">
+                        <div class="w-16 h-16 bg-gradient-to-br from-medical-blue to-medical-teal rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold text-medical-gray mb-3">رضایت ۱۰۰٪ بیماران</h4>
+                            <p class="text-gray-600 text-lg leading-relaxed">
+                                تعهد ما به کیفیت و خدمات پس از درمان، رضایت کامل بیماران را تضمین می‌کند
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-10 rounded-3xl shadow-2xl fade-in">
+                    <h4 class="text-3xl font-bold text-medical-gray mb-8 text-center">آمار و اعتبار کلینیک</h4>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div class="text-center">
+                            <div class="text-5xl font-bold text-medical-blue mb-3">8500+</div>
+                            <div class="text-gray-600 text-lg">بیمار درمان شده</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-5xl font-bold text-medical-blue mb-3">15</div>
+                            <div class="text-gray-600 text-lg">سال تجربه</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-5xl font-bold text-medical-blue mb-3">12</div>
+                            <div class="text-gray-600 text-lg">متخصص مجرب</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-5xl font-bold text-medical-blue mb-3">100%</div>
+                            <div class="text-gray-600 text-lg">رضایت بیماران</div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 pt-8 border-t border-gray-200">
+                        <div class="grid grid-cols-3 gap-6 mb-6">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-medical-blue mb-1">2800+</div>
+                                <div class="text-sm text-gray-600">ایمپلنت موفق</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-medical-blue mb-1">1500+</div>
+                                <div class="text-sm text-gray-600">ارتودنسی کامل</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-medical-blue mb-1">3200+</div>
+                                <div class="text-sm text-gray-600">بلیچینگ انجام شده</div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <h5 class="text-xl font-bold text-medical-gray mb-4">مجوزها و گواهینامه‌ها</h5>
+                            <div class="flex justify-center space-x-reverse space-x-4 text-sm text-gray-600">
+                                <span>• مجوز وزارت صحت</span>
+                                <span>• گواهی ISO 9001</span>
+                                <span>• عضو انجمن دندانپزشکان</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-gray-800 mb-4">نظرات بیماران ما</h3>
+                <p class="text-gray-600">آنچه بیماران ما درباره خدمات کلینیک نور می‌گویند</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <div class="flex mb-4">
+                        <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">"خدمات عالی و کادر بسیار مهربان. دندان‌هایم را کاملاً درمان کردند و حالا لبخند زیبایی دارم."</p>
+                    <div class="font-semibold text-gray-800">احمد رضایی</div>
+                    <div class="text-sm text-gray-500">کابل</div>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <div class="flex mb-4">
+                        <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">"بهترین کلینیک دندانپزشکی که تا حالا دیده‌ام. تجهیزات مدرن و دکتران فوق‌العاده حرفه‌ای."</p>
+                    <div class="font-semibold text-gray-800">فاطمه احمدی</div>
+                    <div class="text-sm text-gray-500">کابل</div>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <div class="flex mb-4">
+                        <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">"قیمت‌ها بسیار منصفانه و کیفیت خدمات عالی. به همه توصیه می‌کنم."</p>
+                    <div class="font-semibold text-gray-800">محمد حسن</div>
+                    <div class="text-sm text-gray-500">کابل</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-gray-800 mb-4">با ما تماس بگیرید</h3>
+                <p class="text-gray-600">برای نوبت‌گیری یا مشاوره رایگان با ما در تماس باشید</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h4 class="text-2xl font-bold text-gray-800 mb-6">اطلاعات تماس</h4>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-reverse space-x-4">
+                                <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+                                    <span class="text-white">📍</span>
+                                </div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-800">آدرس</h5>
+                                    <p class="text-gray-600">کابل، شهرنو، سرک ۱۳، ساختمان پزشکی نور</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-reverse space-x-4">
+                                <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+                                    <span class="text-white">📞</span>
+                                </div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-800">تلفن</h5>
+                                    <p class="text-gray-600">+(93)764002319</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-reverse space-x-4">
+                                <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+                                    <span class="text-white">⏰</span>
+                                </div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-800">ساعات کاری</h5>
+                                    <p class="text-gray-600">شنبه تا پنج‌شنبه: ۸:۰۰ - ۰۶:۰۰</p>
+                                    <p class="text-gray-600">جمعه: ۹:۰۰ - ۰۲:۰۰</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-6">فرم تماس سریع</h4>
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
+                        <p class="text-green-800 text-sm">✅ پیام شما مستقیماً به واتساپ کلینیک ارسال می‌شود</p>
+                    </div>
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">نام و نام خانوادگی *</label>
+                            <input type="text" id="fullName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="نام خود را وارد کنید">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">شماره تلفن *</label>
+                            <input type="tel" id="phoneNumber" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="+ 78 93123 4567">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">نوع خدمات مورد نیاز *</label>
+                            <select id="serviceType" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="">انتخاب کنید</option>
+                                <option value="درمان و پر کردن دندان">درمان و پر کردن دندان</option>
+                                <option value="سفید کردن دندان">سفید کردن دندان</option>
+                                <option value="ارتودنسی">ارتودنسی</option>
+                                <option value="کاشت دندان">کاشت دندان</option>
+                                <option value="روکش دندان">روکش دندان</option>
+                                <option value="جرم‌گیری و بهداشت">جرم‌گیری و بهداشت</option>
+                                <option value="مشاوره عمومی">مشاوره عمومی</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">زمان مراجعه ترجیحی</label>
+                            <select id="preferredTime" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="">انتخاب کنید</option>
+                                <option value="صبح (8-12)">صبح (8-12)</option>
+                                <option value="بعدازظهر (12-16)">بعدازظهر (12-05)</option>
+                                <option value="عصر (16-18)">عصر (05-06)</option>
+                                <option value="هر زمان">هر زمان مناسب است</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">پیام اضافی</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="توضیحات اضافی درباره مشکل یا سوال خود..."></textarea>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <button type="submit" class="flex-1 bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors">
+                                📱 ارسال به واتساپ
+                            </button>
+                            <button type="button" onclick="makePhoneCall()" class="flex-1 bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors">
+                                📞 تماس مستقیم
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="fixed bottom-6 left-6 z-50">
+        <button onclick="sendToWhatsApp('سلام، می‌خواهم با کلینیک دندانپزشکی نور تماس بگیرم.')" 
+                class="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.785"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-reverse space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
+                            <span class="text-white text-xl">🦷</span>
+                        </div>
+                        <h5 class="text-xl font-bold">کلینیک دندانپزشکی نور</h5>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        ما متعهد به ارائه بهترین خدمات دندانپزشکی با استفاده از جدیدترین تکنولوژی و روش‌های درمانی هستیم.
+                    </p>
+                </div>
+                
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">خدمات ما</h5>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>درمان و پر کردن دندان</li>
+                        <li>سفید کردن دندان</li>
+                        <li>ارتودنسی</li>
+                        <li>کاشت دندان</li>
+                        <li>روکش دندان</li>
+                        <li>جرم‌گیری و بهداشت</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">تماس با ما</h5>
+                    <div class="space-y-2 text-gray-300">
+                        <p>📍 کابل، شهرنو، سرک ۱۳</p>
+                        <p>📞 0764002319</p>
+                        <p>⏰ شنبه تا پنج‌شنبه: ۸:۰۰ - ۰۶:۰۰</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy;طراح: علی محمد کریمی. تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Professional fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // WhatsApp and Phone functionality
+        function makePhoneCall() {
+            window.open('tel:+93764002319', '_self');
+        }
+
+        function sendToWhatsApp(message) {
+            const whatsappNumber = '93764002319';
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/${0093764002319}?text=${encodedMessage}`;
+            window.open(whatsappURL, '_blank');
+        }
+
+        // Contact form handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const fullName = document.getElementById('fullName').value;
+            const phoneNumber = document.getElementById('phoneNumber').value;
+            const serviceType = document.getElementById('serviceType').value;
+            const preferredTime = document.getElementById('preferredTime').value;
+            const message = document.getElementById('message').value;
+            
+            if (!fullName || !phoneNumber || !serviceType) {
+                alert('لطفاً فیلدهای ضروری را پر کنید');
+                return;
+            }
+            
+            let whatsappMessage = `سلام، من ${fullName} هستم.\n\n`;
+            whatsappMessage += `📞 شماره تماس: ${phoneNumber}\n`;
+            whatsappMessage += `🦷 خدمات مورد نیاز: ${serviceType}\n`;
+            
+            if (preferredTime) {
+                whatsappMessage += `⏰ زمان ترجیحی: ${preferredTime}\n`;
+            }
+            
+            if (message) {
+                whatsappMessage += `💬 پیام: ${message}\n`;
+            }
+            
+            whatsappMessage += `\nلطفاً برای نوبت‌گیری راهنمایی کنید.\nمتشکرم 🙏`;
+            
+            sendToWhatsApp(whatsappMessage);
+        });
+
+        // Button click handlers
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                if (this.textContent.includes('نوبت') || this.textContent.includes('رزرو')) {
+                    const message = 'سلام، می‌خواهم نوبت بگیرم. لطفاً راهنمایی کنید.';
+                    sendToWhatsApp(message);
+                } else if (this.textContent.includes('مشاوره')) {
+                    const message = 'سلام، برای مشاوره رایگان دندانپزشکی تماس گرفتم. لطفاً راهنمایی کنید.';
+                    sendToWhatsApp(message);
+                } else if (this.textContent.includes('جزئیات')) {
+                    const message = 'سلام، می‌خواهم اطلاعات بیشتری درباره خدمات دندانپزشکی بگیرم.';
+                    sendToWhatsApp(message);
+                }
+            });
+        });
+
+        // Header scroll effect
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+        
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+
+        // Add transition to header
+        header.style.transition = 'transform 0.3s ease-in-out';
+
+        // Counter animation for statistics
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target.toLocaleString('fa-IR');
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current).toLocaleString('fa-IR');
+                }
+            }, 20);
+        }
+
+        // Animate counters when they come into view
+        const counterObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = parseInt(counter.textContent.replace(/[^\d]/g, ''));
+                    animateCounter(counter, target);
+                    counterObserver.unobserve(counter);
+                }
+            });
+        });
+
+        document.querySelectorAll('.text-5xl.font-bold.text-medical-blue').forEach(counter => {
+            counterObserver.observe(counter);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97edf5ea1289f9fb',t:'MTc1NzgzMjczNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
